@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="../static/materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src='bower_components/angular/angular.js'></script>
+  <script type="text/javascript">
+    let app = angular.module('app', []);
+    app.controller('divController', ['$scope', function ($scope) {
+        $scope.myName = 'Jon';
+        $scope.myFavoriteLanguage = 'Javascript';
+        $scope.myFavoriteJSLibrary = 'Angular';
+        console.log($scope);
+    }])
+  </script>
+</head>
+<body>
+  <div ng-controller="divController">
+    <p>My name is: {{myName}}</p>
+    <p>{{myFavoriteLanguage}} is what we are using in MEAN</p>
+    <p>{{myFavoriteJSLibrary}} is a robust templating language</p>
+  </div>
+</body>
+</html>
